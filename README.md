@@ -41,5 +41,9 @@ The repository path is configured in `vite.config.ts`. Update `base` if the repo
 - Page turning and swipe behavior: `src/components/invitation-book.tsx`
 - Styling: `src/app/`
 - Artwork: `public/images/`
+- Dress codes: `src/components/illustrated-event.tsx`
+- Background music configuration: `src/lib/music-config.ts`
+
+The background music player is prepared for “Ishq Hai” from Mismatched Season 3 and remains disabled until its audio file is supplied. Set `backgroundMusicUrl` in `src/lib/music-config.ts` to enable it. For an audio file in `public/audio/`, prefix its path with `import.meta.env.BASE_URL` so it works on GitHub Pages. Enabled music starts when a guest opens the seal. The small music control pauses or resumes it without affecting the animations, and the same player stays mounted across page turns. Audio is loaded only after interaction; if a browser blocks playback, the guest can tap the music control to start it.
 
 Guests can swipe left or right, use the navigation buttons, or use the keyboard arrow keys. Links ending in `#haldi`, `#sangeet`, or `#wedding` open the corresponding page after the seal. Decorative animations automatically respect the device's reduced-motion preference.

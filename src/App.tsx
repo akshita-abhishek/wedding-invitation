@@ -1,6 +1,7 @@
 import Celebration from '@/components/illustrated-event';
 import SealEntrance from '@/components/seal-entrance';
 import InvitationBook from '@/components/invitation-book';
+import { useWeddingMusic } from '@/components/wedding-music';
 import './app/seal-entrance.css';
 import './app/palace-opening.css';
 
@@ -32,5 +33,6 @@ const pages = [
 ];
 
 export default function Home(){
- return <SealEntrance paginated><InvitationBook pages={pages}/></SealEntrance>;
+ const music = useWeddingMusic();
+ return <>{music.audio}<SealEntrance paginated onOpen={music.start}><InvitationBook pages={pages} musicControl={music.control}/></SealEntrance></>;
 }

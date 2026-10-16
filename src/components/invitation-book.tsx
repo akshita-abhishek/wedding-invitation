@@ -8,7 +8,7 @@ import '../app/invitation-book.css';
 type Page = { id: string; title: string; content: ReactNode };
 type Turn = { from: number; to: number; direction: 'forward' | 'backward' };
 
-export default function InvitationBook({ pages }: { pages: Page[] }) {
+export default function InvitationBook({ pages, musicControl }: { pages: Page[]; musicControl?: ReactNode }) {
  const [current, setCurrent] = useState(0);
  const [turn, setTurn] = useState<Turn | null>(null);
  const book = useRef<HTMLElement>(null);
@@ -120,7 +120,7 @@ export default function InvitationBook({ pages }: { pages: Page[] }) {
      aria-label={current === pages.length - 1 ? 'Back to the first page' : `Next page: ${pages[current + 1].title}`}
      onClick={() => go(current === pages.length - 1 ? 0 : current + 1)}>{current === pages.length - 1 ? <RotateCcw aria-hidden="true"/> : <ArrowRight aria-hidden="true"/>}</Button>
    </nav>
-   <p className="book-gesture-hint"><span className="touch-gesture">Swipe to turn the page</span><span className="keyboard-gesture">Turn the page with the arrows</span></p>
+   <div className="book-footer"><p className="book-gesture-hint"><span className="touch-gesture">Swipe to turn the page</span><span className="keyboard-gesture">Turn the page with the arrows</span></p>{musicControl}</div>
   </div>
  </main>;
 }

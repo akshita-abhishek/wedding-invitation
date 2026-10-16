@@ -9,9 +9,9 @@ const details = {
  wedding: {title:'Wedding', heading:'Together, with your blessings', verse:'सात फेरे, सात वचन, एक जीवन।'},
 };
 const schedule = {
- haldi: {date:'25 November 2026', time:'2:00 PM', dateTime:'2026-11-25T14:00:00'},
- sangeet: {date:'25 November 2026', time:'7:00 PM', dateTime:'2026-11-25T19:00:00'},
- wedding: {date:'26 November 2026', time:'1:00 PM', dateTime:'2026-11-26T13:00:00'},
+ haldi: {date:'25 November 2026', time:'2:00 PM', dateTime:'2026-11-25T14:00:00', dressCode:'Shades of Sunshine', dressNote:''},
+ sangeet: {date:'25 November 2026', time:'7:00 PM', dateTime:'2026-11-25T19:00:00', dressCode:'Shimmer & Shadows', dressNote:'Bring out the bling! Dress to dazzle in deep, dark shades and sparkly outfits.'},
+ wedding: {date:'26 November 2026', time:'1:00 PM', dateTime:'2026-11-26T13:00:00', dressCode:'Pastel Perfection', dressNote:'For the barat & reception'},
 };
 export default function IllustratedEvent({theme,book=false}:{theme:keyof typeof details;book?:boolean}) {
  const root=useRef<HTMLElement>(null), burst=useRef<HTMLDivElement>(null),timer=useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -35,11 +35,14 @@ export default function IllustratedEvent({theme,book=false}:{theme:keyof typeof 
     <div className="scene-shade" aria-hidden="true"/>
     <div className="glimmers" aria-hidden="true">{Array.from({length:17},(_,i)=><i key={i} style={{left:`${7+(i*31)%88}%`,top:`${5+(i*19)%87}%`,animationDelay:`-${i*.43}s`}}/>)}</div>
     <div className="falling-petals" aria-hidden="true">{Array.from({length:12},(_,i)=><i key={i} style={{left:`${5+(i*23)%88}%`,top:'-15px','--drift':`${(i%2?1:-1)*(25+i*5)}px`,animationDelay:`-${i*.81}s`,animationDuration:`${9+i%4}s`} as CSSProperties}/>)}</div>
-    <div className="invitation-wording">{theme==='welcome'?<><p className="welcome-blessing" lang="hi">॥ शुभ विवाह ॥</p><h1 id="welcome-title"><span>Akshita</span><em>&</em><span>Abhishek</span></h1><p className="welcome-verse" lang="hi">एक नई शुरुआत, आपके आशीर्वाद के साथ।</p></>:<><h2 id={`${theme}-title`}>{event.title}</h2><p className="couple">Akshita <em>&</em> Abhishek</p><div className="event-details">{eventSchedule&&<p><time dateTime={eventSchedule.dateTime}>{eventSchedule.date} · {eventSchedule.time}</time></p>}<span>Hari Niwas Palace</span></div></>}</div>
+    <div className="invitation-wording">{theme==='welcome'?<><p className="welcome-blessing" lang="hi">॥ शुभ विवाह ॥</p><h1 id="welcome-title"><span>Akshita</span><em>&</em><span>Abhishek</span></h1><p className="welcome-verse" lang="hi">एक नई शुरुआत, आपके आशीर्वाद के साथ।</p></>:<><h2 id={`${theme}-title`}>{event.title}</h2><div className="event-details">{eventSchedule&&<p><time dateTime={eventSchedule.dateTime}>{eventSchedule.date} · {eventSchedule.time}</time></p>}<span>Hari Niwas Palace</span></div></>}</div>
     <button className="scene-touch" type="button" aria-label={`Shower petals over the ${event.title} invitation`} onClick={scatter}/>
     <div ref={burst} className="petal-burst" aria-hidden="true"/><span className="touch-hint">{theme==='welcome'?'Together with our families, we invite you to celebrate.':'Touch for a little magic'}</span>
    </div>
-   <div className="scene-footer"><span className="scene-response" role="status" lang={touched?'hi':'en'}>{touched?event.verse:'With love, from both our families'}</span></div>
+   <div className={`scene-footer${eventSchedule?' event-attire':''}`}>
+    {eventSchedule&&<div className="dress-code"><p><span>Dress code:</span> {eventSchedule.dressCode}</p>{eventSchedule.dressNote&&<p className="dress-note">{eventSchedule.dressNote}</p>}</div>}
+    <span className={eventSchedule?'sr-only':'scene-response'} role="status" lang={touched?'hi':'en'}>{touched?event.verse:eventSchedule?'':'With love, from both our families'}</span>
+   </div>
    {theme==='welcome'&&!book&&<a className="welcome-continue" href="#invitation">Our invitation <span aria-hidden="true">↓</span></a>}
   </div>
  </section>;
