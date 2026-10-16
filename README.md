@@ -2,7 +2,7 @@
 
 An illustrated, interactive wedding invitation with a gold seal and five turning pages: welcome, family invitation, Haldi, Sangeet, and Wedding.
 
-**Website:** https://abhitaker.github.io/wedding-invitation/
+**Website:** https://akshita-abhishek.github.io/wedding-invitation/
 
 | Celebration | Date | Time | Venue |
 | --- | --- | --- | --- |
