@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env*
+.dev.vars*
+*.pem
+*.tsbuildinfo
+*.log
+.DS_Store
+PRIVATE-ACCESS.txt
+.codex/
+.agents/

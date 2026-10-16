@@ -1,0 +1,140 @@
+
+.illustrated-haldi{--haldi-paper:#fff9e9;--haldi-ink:#704923;--haldi-cream:#704923;font-family:Arial,sans-serif}
+.illustrated-haldi *{box-sizing:border-box}
+.illustrated-haldi .preview-page{padding:24px clamp(12px,5%,36px) 14px;background:var(--haldi-paper);border-radius:6px;max-width:530px;margin:auto}
+.illustrated-haldi p,.illustrated-haldi h2{margin:0}
+.illustrated-haldi .scene-heading{text-align:center;font:italic 17px/1.6 Georgia,serif;color:#704923;margin-bottom:18px}
+.illustrated-haldi .invitation-artboard{position:relative;container-type:inline-size;aspect-ratio:2/3;isolation:isolate;overflow:hidden;background:#18152e;border-radius:130px 130px 7px 7px;box-shadow:0 9px 30px #31204020}
+.illustrated-haldi .scene-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.035);transition:transform 1.4s ease-out;pointer-events:none}
+.illustrated-haldi .scene-shade{position:absolute;inset:0;background:linear-gradient(transparent 15%,#fff9eb22 25%,transparent 47%);pointer-events:none}
+.illustrated-haldi .invitation-wording{position:absolute;left:18px;right:18px;top:23%;text-align:center;color:var(--haldi-cream);text-shadow:0 1px 10px #fff7eaaa;pointer-events:none}
+.illustrated-haldi .prelude{font:13px/1.7 Georgia,serif;color:#e2cbea;letter-spacing:.02em}
+.illustrated-haldi h2{font:italic clamp(39px,13cqw,60px)/1.14 Georgia,serif;font-weight:400;letter-spacing:-.055em;margin:0 0 6px}
+.illustrated-haldi .couple{font:20px/1.5 Georgia,serif;letter-spacing:.01em}
+.illustrated-haldi .couple em{font-size:17px;color:#a47536;margin:0 5px}
+.illustrated-haldi .invitation-divider{font:20px/1 Georgia,serif;color:#ddc08d;margin:7px 0}
+.illustrated-haldi .invitation-message{font:italic 15px/1.65 Georgia,serif;color:#eee0f0}
+.illustrated-haldi .event-details{margin-top:7px}
+.illustrated-haldi .event-details p{font:13px/1.65 Arial,sans-serif;letter-spacing:.025em}
+.illustrated-haldi .event-details span{font:12px/1.8 Arial,sans-serif;color:#704923}
+.illustrated-haldi .scene-touch{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;z-index:5;border-radius:inherit}
+.illustrated-haldi .scene-touch:focus-visible{outline:3px solid #e0c69f;outline-offset:-7px}
+.illustrated-haldi .touch-hint{position:absolute;bottom:12px;left:15px;right:15px;text-align:center;font:italic 12px/1.5 Georgia,serif;color:#704923;text-shadow:0 1px 6px #fff6dc;pointer-events:none;z-index:4}
+.illustrated-haldi .glimmers,.illustrated-haldi .falling-petals,.illustrated-haldi .petal-burst{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.illustrated-haldi .glimmers i{position:absolute;border-radius:50%;width:5px;height:5px;background:#ffd984;box-shadow:0 0 12px 4px #e7ae4966;animation:haldi-glimmer 4s ease-in-out infinite alternate}
+.illustrated-haldi .falling-petals i,.illustrated-haldi .petal-burst i{position:absolute;width:9px;height:14px;border-radius:80% 12% 75% 20%;background:linear-gradient(135deg,#e9ac16,#f3b875);opacity:0;box-shadow:inset 1px 0 2px #fff7;animation:haldi-petal-fall 10s linear infinite}
+.illustrated-haldi .falling-petals i:nth-child(3n){background:linear-gradient(135deg,#e9ac16,#ecb74a);width:7px;height:10px}
+.illustrated-haldi .petal-burst i{animation:haldi-petal-scatter 2.2s ease-out both;left:var(--x);top:var(--y)}
+.illustrated-haldi .scene-footer{display:flex;justify-content:center;align-items:center;padding-top:15px;color:var(--haldi-ink)}
+
+.illustrated-haldi .scene-response{font:italic 12px/1.5 Georgia,serif;text-align:center}
+@keyframes haldi-glimmer{0%,20%{opacity:.15;transform:scale(.65)}80%,100%{opacity:.9;transform:scale(1.3)}}
+@keyframes haldi-petal-fall{0%{opacity:0;transform:translate(0,-20px) rotate(0)}8%{opacity:.75}88%{opacity:.6}100%{opacity:0;transform:translate(var(--drift),760px) rotate(320deg)}}
+@keyframes haldi-petal-scatter{0%{opacity:0;transform:scale(.2) rotate(0)}10%{opacity:.95}65%{opacity:.85}100%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--spin)) scale(.65)}}
+@media(max-width:400px){.illustrated-haldi .preview-page{padding:17px 12px 12px}.illustrated-haldi h2{font-size:clamp(39px,13cqw,51px);margin:0 0 4px}.illustrated-haldi .couple{font-size:18px}.illustrated-haldi .prelude{font-size:12px}.illustrated-haldi .invitation-message{font-size:13px}.illustrated-haldi .event-details{margin-top:5px}.illustrated-haldi .invitation-divider{margin:4px 0}.illustrated-haldi .event-details p{font-size:12px}.illustrated-haldi .event-details span{font-size:11px}.illustrated-haldi .scene-heading{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.illustrated-haldi .glimmers i{animation:none;opacity:.4}.illustrated-haldi .falling-petals i,.illustrated-haldi .petal-burst i{display:none}.illustrated-haldi .scene-art{transition:none}}
+
+
+.illustrated-sangeet{--sg-paper:#f5f1fa;--sg-ink:#615078;--sg-cream:#f9f0e6;font-family:Arial,sans-serif}
+.illustrated-sangeet *{box-sizing:border-box}
+.illustrated-sangeet .preview-page{padding:24px clamp(12px,5%,36px) 14px;background:var(--sg-paper);border-radius:6px;max-width:530px;margin:auto}
+.illustrated-sangeet p,.illustrated-sangeet h2{margin:0}
+.illustrated-sangeet .scene-heading{text-align:center;font:italic 17px/1.6 Georgia,serif;color:#8b719c;margin-bottom:18px}
+.illustrated-sangeet .invitation-artboard{position:relative;container-type:inline-size;aspect-ratio:2/3;isolation:isolate;overflow:hidden;background:#18152e;border-radius:130px 130px 7px 7px;box-shadow:0 9px 30px #31204020}
+.illustrated-sangeet .scene-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.035);transition:transform 1.4s ease-out;pointer-events:none}
+.illustrated-sangeet .scene-shade{position:absolute;inset:0;background:linear-gradient(transparent 19%,#11112850 30%,#11112866 49%,transparent 65%);pointer-events:none}
+.illustrated-sangeet .invitation-wording{position:absolute;left:18px;right:18px;top:23%;text-align:center;color:var(--sg-cream);text-shadow:0 1px 12px #12102680;pointer-events:none}
+.illustrated-sangeet .prelude{font:13px/1.7 Georgia,serif;color:#e2cbea;letter-spacing:.02em}
+.illustrated-sangeet h2{font:italic clamp(39px,13cqw,60px)/1.14 Georgia,serif;font-weight:400;letter-spacing:-.055em;margin:0 0 6px}
+.illustrated-sangeet .couple{font:20px/1.5 Georgia,serif;letter-spacing:.01em}
+.illustrated-sangeet .couple em{font-size:17px;color:#dec399;margin:0 5px}
+.illustrated-sangeet .invitation-divider{font:20px/1 Georgia,serif;color:#ddc08d;margin:7px 0}
+.illustrated-sangeet .invitation-message{font:italic 15px/1.65 Georgia,serif;color:#eee0f0}
+.illustrated-sangeet .event-details{margin-top:7px}
+.illustrated-sangeet .event-details p{font:13px/1.65 Arial,sans-serif;letter-spacing:.025em}
+.illustrated-sangeet .event-details span{font:12px/1.8 Arial,sans-serif;color:#ded0e5}
+.illustrated-sangeet .scene-touch{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;z-index:5;border-radius:inherit}
+.illustrated-sangeet .scene-touch:focus-visible{outline:3px solid #e0c69f;outline-offset:-7px}
+.illustrated-sangeet .touch-hint{position:absolute;bottom:12px;left:15px;right:15px;text-align:center;font:italic 12px/1.5 Georgia,serif;color:#fff2db;text-shadow:0 1px 5px #22172e;pointer-events:none;z-index:4}
+.illustrated-sangeet .glimmers,.illustrated-sangeet .falling-petals,.illustrated-sangeet .petal-burst{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.illustrated-sangeet .glimmers i{position:absolute;border-radius:50%;width:5px;height:5px;background:#fff2cf;box-shadow:0 0 10px 3px #ffe8bc66;animation:sg-glimmer 4s ease-in-out infinite alternate}
+.illustrated-sangeet .falling-petals i,.illustrated-sangeet .petal-burst i{position:absolute;width:9px;height:14px;border-radius:80% 12% 75% 20%;background:linear-gradient(135deg,#faf2ff,#cbb4e1);opacity:0;box-shadow:inset 1px 0 2px #fff7;animation:sg-petal-fall 10s linear infinite}
+.illustrated-sangeet .falling-petals i:nth-child(3n){background:linear-gradient(135deg,#ffedb3,#d5b980);width:7px;height:10px}
+.illustrated-sangeet .petal-burst i{animation:sg-petal-scatter 2.2s ease-out both;left:var(--x);top:var(--y)}
+.illustrated-sangeet .scene-footer{display:flex;justify-content:center;align-items:center;padding-top:15px;color:var(--sg-ink)}
+
+.illustrated-sangeet .scene-response{font:italic 12px/1.5 Georgia,serif;text-align:center}
+@keyframes sg-glimmer{0%,20%{opacity:.15;transform:scale(.65)}80%,100%{opacity:.9;transform:scale(1.3)}}
+@keyframes sg-petal-fall{0%{opacity:0;transform:translate(0,-20px) rotate(0)}8%{opacity:.75}88%{opacity:.6}100%{opacity:0;transform:translate(var(--drift),760px) rotate(320deg)}}
+@keyframes sg-petal-scatter{0%{opacity:0;transform:scale(.2) rotate(0)}10%{opacity:.95}65%{opacity:.85}100%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--spin)) scale(.65)}}
+@media(max-width:400px){.illustrated-sangeet .preview-page{padding:17px 12px 12px}.illustrated-sangeet h2{font-size:clamp(39px,13cqw,51px);margin:0 0 4px}.illustrated-sangeet .couple{font-size:18px}.illustrated-sangeet .prelude{font-size:12px}.illustrated-sangeet .invitation-message{font-size:13px}.illustrated-sangeet .event-details{margin-top:5px}.illustrated-sangeet .invitation-divider{margin:4px 0}.illustrated-sangeet .event-details p{font-size:12px}.illustrated-sangeet .event-details span{font-size:11px}.illustrated-sangeet .scene-heading{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.illustrated-sangeet .glimmers i{animation:none;opacity:.4}.illustrated-sangeet .falling-petals i,.illustrated-sangeet .petal-burst i{display:none}.illustrated-sangeet .scene-art{transition:none}}
+
+
+.illustrated-wedding{--wedding-paper:#fbf2e5;--wedding-ink:#752b2b;--wedding-cream:#752b2b;font-family:Arial,sans-serif}
+.illustrated-wedding *{box-sizing:border-box}
+.illustrated-wedding .preview-page{padding:24px clamp(12px,5%,36px) 14px;background:var(--wedding-paper);border-radius:6px;max-width:530px;margin:auto}
+.illustrated-wedding p,.illustrated-wedding h2{margin:0}
+.illustrated-wedding .scene-heading{text-align:center;font:italic 17px/1.6 Georgia,serif;color:#752b2b;margin-bottom:18px}
+.illustrated-wedding .invitation-artboard{position:relative;container-type:inline-size;aspect-ratio:2/3;isolation:isolate;overflow:hidden;background:#18152e;border-radius:130px 130px 7px 7px;box-shadow:0 9px 30px #31204020}
+.illustrated-wedding .scene-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.035);transition:transform 1.4s ease-out;pointer-events:none}
+.illustrated-wedding .scene-shade{position:absolute;inset:0;background:linear-gradient(transparent 15%,#fff9eb22 25%,transparent 47%);pointer-events:none}
+.illustrated-wedding .invitation-wording{position:absolute;left:18px;right:18px;top:18%;text-align:center;color:var(--wedding-cream);text-shadow:0 1px 10px #fff7eaaa;pointer-events:none}
+.illustrated-wedding .prelude{font:13px/1.7 Georgia,serif;color:#e2cbea;letter-spacing:.02em}
+.illustrated-wedding h2{font:italic clamp(39px,13cqw,60px)/1.14 Georgia,serif;font-weight:400;letter-spacing:-.055em;margin:0 0 6px}
+.illustrated-wedding .couple{font:20px/1.5 Georgia,serif;letter-spacing:.01em}
+.illustrated-wedding .couple em{font-size:17px;color:#a47536;margin:0 5px}
+.illustrated-wedding .invitation-divider{font:20px/1 Georgia,serif;color:#ddc08d;margin:7px 0}
+.illustrated-wedding .invitation-message{font:italic 15px/1.65 Georgia,serif;color:#eee0f0}
+.illustrated-wedding .event-details{margin-top:7px}
+.illustrated-wedding .event-details p{font:13px/1.65 Arial,sans-serif;letter-spacing:.025em}
+.illustrated-wedding .event-details span{font:12px/1.8 Arial,sans-serif;color:#752b2b}
+.illustrated-wedding .scene-touch{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;z-index:5;border-radius:inherit}
+.illustrated-wedding .scene-touch:focus-visible{outline:3px solid #e0c69f;outline-offset:-7px}
+.illustrated-wedding .touch-hint{position:absolute;bottom:12px;left:15px;right:15px;text-align:center;font:italic 12px/1.5 Georgia,serif;color:#752b2b;text-shadow:0 1px 6px #fff6dc;pointer-events:none;z-index:4}
+.illustrated-wedding .glimmers,.illustrated-wedding .falling-petals,.illustrated-wedding .petal-burst{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.illustrated-wedding .glimmers i{position:absolute;border-radius:50%;width:5px;height:5px;background:#ffd984;box-shadow:0 0 12px 4px #e7ae4966;animation:wedding-glimmer 4s ease-in-out infinite alternate}
+.illustrated-wedding .falling-petals i,.illustrated-wedding .petal-burst i{position:absolute;width:9px;height:14px;border-radius:80% 12% 75% 20%;background:linear-gradient(135deg,#ac2839,#f3b875);opacity:0;box-shadow:inset 1px 0 2px #fff7;animation:wedding-petal-fall 10s linear infinite}
+.illustrated-wedding .falling-petals i:nth-child(3n){background:linear-gradient(135deg,#ac2839,#ecb74a);width:7px;height:10px}
+.illustrated-wedding .petal-burst i{animation:wedding-petal-scatter 2.2s ease-out both;left:var(--x);top:var(--y)}
+.illustrated-wedding .scene-footer{display:flex;justify-content:center;align-items:center;padding-top:15px;color:var(--wedding-ink)}
+
+.illustrated-wedding .scene-response{font:italic 12px/1.5 Georgia,serif;text-align:center}
+@keyframes wedding-glimmer{0%,20%{opacity:.15;transform:scale(.65)}80%,100%{opacity:.9;transform:scale(1.3)}}
+@keyframes wedding-petal-fall{0%{opacity:0;transform:translate(0,-20px) rotate(0)}8%{opacity:.75}88%{opacity:.6}100%{opacity:0;transform:translate(var(--drift),760px) rotate(320deg)}}
+@keyframes wedding-petal-scatter{0%{opacity:0;transform:scale(.2) rotate(0)}10%{opacity:.95}65%{opacity:.85}100%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--spin)) scale(.65)}}
+@media(max-width:400px){.illustrated-wedding .preview-page{padding:17px 12px 12px}.illustrated-wedding h2{font-size:clamp(39px,13cqw,51px);margin:0 0 4px}.illustrated-wedding .couple{font-size:18px}.illustrated-wedding .prelude{font-size:12px}.illustrated-wedding .invitation-message{font-size:13px}.illustrated-wedding .event-details{margin-top:5px}.illustrated-wedding .invitation-divider{margin:4px 0}.illustrated-wedding .event-details p{font-size:12px}.illustrated-wedding .event-details span{font-size:11px}.illustrated-wedding .scene-heading{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.illustrated-wedding .glimmers i{animation:none;opacity:.4}.illustrated-wedding .falling-petals i,.illustrated-wedding .petal-burst i{display:none}.illustrated-wedding .scene-art{transition:none}}
+
+.illustrated-event{padding:48px 16px;scroll-margin-top:0}.illustrated-haldi{background:#fff9e9}.illustrated-sangeet{background:#f5f1fa}.illustrated-wedding{background:#fbf2e5}.illustrated-event .preview-page{width:100%;max-width:600px}.illustrated-event .scene-heading{font-size:18px}.illustrated-event .invitation-artboard h2{font-size:clamp(40px,13cqw,70px);letter-spacing:-.035em}.illustrated-event .scene-touch{cursor:pointer}.illustrated-event .scene-response{font-size:14px}.illustrated-event .event-details p{font-size:14px}.illustrated-event .event-details span{font-size:13px}.illustrated-event .scene-footer{min-height:44px}.illustrated-event .scene-art{max-width:none}.illustrated-event .scene-shade{pointer-events:none}@media(max-width:400px){.illustrated-event{padding:28px 0}.illustrated-event .scene-heading{font-size:16px}.illustrated-event .scene-footer{gap:8px}.illustrated-event .scene-response{font-size:12px}}
+
+/* Centre the wording in each painting's open sky, above the figures and mandap.
+   Scale the whole composition with the artboard, including on narrow phones. */
+.illustrated-event:not(.illustrated-welcome) .invitation-wording {
+  top:var(--wording-center,28%);
+  left:6%;
+  right:6%;
+  transform:translateY(-50%);
+}
+.illustrated-wedding {--wording-center:26%}
+.illustrated-event .invitation-artboard h2 {
+  font-size:clamp(34px,11cqw,60px);
+  line-height:1.08;
+  margin:0 0 4px;
+}
+.illustrated-event .couple {
+  font-size:clamp(17px,4.8cqw,24px);
+  line-height:1.35;
+}
+.illustrated-event .couple em {font-size:.85em;margin:0 3px}
+.illustrated-event .event-details {margin-top:clamp(8px,2.4cqw,12px)}
+.illustrated-event .event-details p {
+  font-size:clamp(13px,3.8cqw,16px);
+  line-height:1.5;
+  letter-spacing:0;
+}
+.illustrated-event .event-details span {
+  display:block;
+  font-size:clamp(13px,3.5cqw,14px);
+  line-height:1.5;
+}

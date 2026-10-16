@@ -1,0 +1,37 @@
+.illustrated-event.illustrated-welcome{padding:0 16px 32px;background:#fbf3e4;scroll-margin-top:0;color:#684331}
+.illustrated-welcome .preview-page{max-width:600px;padding:0 24px;background:transparent}
+.illustrated-welcome .invitation-artboard{border-radius:0;box-shadow:none;background:#fbf1df}
+.illustrated-welcome .scene-shade{display:none}
+.illustrated-welcome .invitation-wording{top:18%;left:11%;right:11%;color:#684331;text-shadow:0 1px 10px #fff8de}
+.illustrated-welcome .welcome-blessing{font:clamp(14px,3.5cqw,19px)/1.6 Georgia,serif;color:#97733d}
+.illustrated-welcome h1{font:400 clamp(31px,9.6cqw,53px)/.98 Georgia,serif;letter-spacing:-.04em;margin:10px 0 0}
+.illustrated-welcome h1 span{display:block;font:inherit;color:inherit}
+.illustrated-welcome h1 em{display:block;font:italic .47em/1.1 Georgia,serif;margin:4px 0;color:#a47b3d}
+.illustrated-welcome .welcome-verse{font:clamp(14px,2.8cqw,16px)/1.6 Georgia,serif;margin-top:13px;color:#81603d}
+.illustrated-welcome .touch-hint{bottom:2.5%;font:italic 14px/1.5 Georgia,serif;color:#674431;text-shadow:0 0 8px #fff7e3,0 0 5px #fff7e3}
+.illustrated-welcome .falling-petals i,.illustrated-welcome .petal-burst i{background:linear-gradient(135deg,#e9b8a9,#c9927f)}
+.illustrated-welcome .falling-petals i:nth-child(3n){background:linear-gradient(135deg,#f8e4bc,#d5b980)}
+.illustrated-welcome .welcome-continue{display:flex;align-items:center;justify-content:center;gap:16px;padding:16px;margin:4px auto 0;max-width:220px;font:italic 18px Georgia,serif;color:#7d5c35}
+.illustrated-welcome .welcome-continue span{font:20px Arial,sans-serif}
+.nav{background:#fbf3e4;border-bottom:0}
+@media(max-width:640px){.illustrated-event.illustrated-welcome{padding:0 0 24px}.illustrated-welcome .preview-page{padding:0 12px}.illustrated-welcome .invitation-wording{top:16%}.illustrated-welcome .welcome-verse{font-size:14px}.illustrated-welcome .touch-hint{font-size:12px}.illustrated-welcome .scene-footer{padding-inline:6px}}
+.family-invitation{padding:36px 24px 48px;background:#fbf3e4;scroll-margin-top:30px}
+.family-letter{position:relative;isolation:isolate;max-width:960px;margin:auto;background:linear-gradient(120deg,#fffbf0,#f7eddc);border:1px solid #b9955552;box-shadow:0 12px 36px #70532509;text-align:center;color:#684331}
+.family-letter::before,.family-letter::after{content:'';position:absolute;inset:0 0 auto;height:200px;background:url('/images/palace-welcome.jpg') center top/100% auto no-repeat;mask-image:linear-gradient(#0008,transparent);z-index:-1;pointer-events:none}
+.family-letter::after{inset:auto 0 0;height:110px;transform:rotate(180deg);opacity:.6}
+.family-letter-content{padding:110px 60px 75px}
+.family-letter .family-eyebrow{font:12px/1.8 Arial,sans-serif;letter-spacing:.18em;color:#896a3d}
+.family-letter h2{font:400 clamp(28px,3.3vw,38px)/1.25 Georgia,serif;margin:22px 0 10px;letter-spacing:-.03em}
+.family-letter p{font:16px/1.8 Georgia,serif;color:#75583f}
+.family-letter .letter-opening{font-style:italic}
+.letter-families{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:32px;align-items:center;margin:46px 0 30px}
+.letter-families h3{font:400 clamp(36px,4vw,49px)/1.06 Georgia,serif;letter-spacing:-.035em;color:#6b4934}
+.letter-families h3 span{display:block;font-size:.64em;letter-spacing:0;margin-top:10px}
+.letter-families .letter-relation{font:12px/1.8 Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;margin:24px 0 9px;color:#977647}
+.letter-weds{font:italic 26px/1.5 Georgia,serif;color:#a47e43}
+.letter-ornament{font:24px/1.5 Georgia,serif;color:#b79560;margin:20px 0 22px}
+.family-letter .letter-verse{font-size:20px;line-height:1.8;margin-bottom:12px;color:#8b673b}
+.celebration-bridge{padding:30px 24px 42px;text-align:center;background:linear-gradient(#fbf3e4,#fff9e9);scroll-margin-top:20px}
+.celebration-bridge p{font:20px/1.8 Georgia,serif;color:#8a673c}
+.celebration-bridge span{display:block;font:25px Georgia,serif;color:#b69351;margin-top:20px}
+@media(max-width:640px){.family-invitation{padding:16px 16px 28px}.family-letter-content{padding:84px 20px 55px}.family-letter::before{height:110px}.family-letter h2{font-size:28px}.letter-families{grid-template-columns:1fr;gap:26px;margin:32px 0}.letter-families h3{font-size:40px}.letter-families .letter-relation{margin-top:18px}.letter-weds{font-size:24px}.family-letter .letter-verse{font-size:18px}.celebration-bridge p{font-size:18px}.celebration-bridge{padding:24px 20px 32px}}

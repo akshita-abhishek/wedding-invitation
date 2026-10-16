@@ -1,0 +1,114 @@
+.invitation-book {
+ --book-width:min(440px,calc(100vw - 32px),calc((100svh - 130px) * .6));
+ --book-paper:#fbf3e4;
+ min-height:100svh;
+ display:grid;
+ place-items:center;
+ padding:24px 16px 14px;
+ color:#745535;
+ background:radial-gradient(ellipse at 50% 40%,#fffaf0,#eee4d2 90%);
+ transition:background-color .7s;
+ overflow-x:clip;
+}
+.book-theme-sangeet {background:radial-gradient(ellipse at 50% 40%,#f5f0f7,#ded6e5 90%)}
+.book-reader {width:var(--book-width);min-width:274px;max-width:100%;margin:auto}
+.book-stage {
+ position:relative;
+ width:100%;
+ aspect-ratio:3/5;
+ perspective:1900px;
+ isolation:isolate;
+ touch-action:pan-y pinch-zoom;
+ user-select:none;
+ -webkit-user-select:none;
+ box-shadow:0 22px 65px #58412022,0 3px 10px #58412016;
+ border-radius:3px 8px 8px 3px;
+}
+.book-stage::before,.book-stage::after {content:'';position:absolute;inset:3px -4px -3px 4px;border:1px solid #c5ac803d;border-radius:inherit;background:#f8efdE;z-index:-1;pointer-events:none}
+.book-stage::after {inset:6px -7px -6px 7px;z-index:-2;background:#eadfc8}
+.book-page {position:absolute;inset:0;border-radius:inherit;background:var(--book-paper);transform-origin:left center;backface-visibility:hidden;overflow:hidden;z-index:1}
+.book-page[hidden] {display:none}
+.book-page-content {height:100%;overflow:hidden}
+.book-page::after {content:'';position:absolute;inset:0;pointer-events:none;border-radius:inherit;box-shadow:inset 1px 0 1px #fff8,inset 9px 0 15px -14px #5a3d24}
+.book-fold-shadow {position:absolute;inset:0;z-index:8;pointer-events:none;background:linear-gradient(90deg,#62462c30,transparent 9%,transparent 65%,#57351b55);opacity:0}
+.book-page.page-turning {z-index:3;will-change:transform;box-shadow:20px 5px 40px #3d251b2b}
+.turn-forward .page-turning {animation:book-turn-forward .7s cubic-bezier(.32,.05,.26,1) both}
+.turn-backward .page-turning {animation:book-turn-backward .7s cubic-bezier(.32,.05,.26,1) both}
+.page-turning .book-fold-shadow {animation:book-fold-shade .7s ease-in-out both}
+.book-stage.is-turning {pointer-events:none}
+@keyframes book-turn-forward {from{transform:rotateY(0)}to{transform:rotateY(-115deg)}}
+@keyframes book-turn-backward {from{transform:rotateY(-115deg)}to{transform:rotateY(0)}}
+@keyframes book-fold-shade {0%,100%{opacity:0}45%{opacity:.8}}
+.book-navigation {display:grid;grid-template-columns:48px 1fr 48px;align-items:center;gap:16px;padding-top:20px}
+.book-navigation .page-arrow {width:46px;height:46px;border:1px solid #a5875455;border-radius:50%;background:#fff9ec66;color:#79572f;cursor:pointer}
+.book-navigation .page-arrow:hover {background:#fff9ec;border-color:#a58754}
+.book-navigation .page-arrow:disabled {opacity:.22}
+.book-navigation .page-arrow svg {width:19px;height:19px}
+.book-navigation .page-arrow:focus-visible {outline:2px solid #94703a;outline-offset:4px}
+.book-pagination {display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center}
+.book-page-name {font:italic 18px/1.15 Georgia,serif}
+.book-page-number {font:10px/1.3 Arial,sans-serif;letter-spacing:.18em;color:#947a55}
+.book-gesture-hint {text-align:center;font:italic 11px/1.5 Georgia,serif;color:#9b8463;margin:8px 0 0}
+.touch-gesture {display:none}
+@media(hover:none) {.touch-gesture{display:inline}.keyboard-gesture{display:none}}
+
+/* The artwork remains proportional inside a single paper page. */
+.invitation-book .illustrated-event {height:100%;padding:0;background:var(--book-paper)}
+.invitation-book .illustrated-sangeet {--book-paper:#f5f1fa}
+.invitation-book .illustrated-wedding {--book-paper:#fbf2e5}
+.invitation-book .preview-page {height:100%;max-width:none;padding:0 12px;display:flex;flex-direction:column;justify-content:center;background:transparent;border-radius:0}
+.invitation-book .scene-heading {font:italic clamp(12px,3.4cqw,17px)/1.3 Georgia,serif;margin:0 0 10px}
+.invitation-book .invitation-artboard {flex:none;width:100%;border-radius:100px 100px 3px 3px;box-shadow:none}
+.invitation-book .scene-footer {padding-top:10px;min-height:0}
+.invitation-book .scene-response {font-size:12px;line-height:1.4}
+.invitation-book .touch-hint {display:none}
+.invitation-book .welcome-continue {display:none}
+.invitation-book .illustrated-welcome .preview-page {padding:0}
+.invitation-book .illustrated-welcome .invitation-artboard {border-radius:0}
+.invitation-book .illustrated-welcome .scene-footer {padding:10px 10px 0}
+.invitation-book .illustrated-welcome .invitation-wording {top:14%}
+.invitation-book .illustrated-welcome .welcome-verse {font-size:clamp(12px,3.6cqw,16px);margin-top:10px}
+.invitation-book .invitation-artboard h2 {font-size:clamp(28px,11cqw,60px)}
+.invitation-book .couple {font-size:clamp(15px,4.8cqw,24px)}
+.invitation-book .event-details p,.invitation-book .event-details span {font-size:clamp(12px,3.8cqw,16px)}
+.book-page-content {container-type:inline-size}
+
+/* A compact family letter, with the same botanical paper as the cover. */
+.invitation-book .family-invitation {height:100%;padding:0;background:transparent}
+.invitation-book .family-letter {height:100%;max-width:none;border:0;box-shadow:none;display:flex;align-items:center}
+.invitation-book .family-letter-content {width:100%;padding:30px 20px}
+.invitation-book .family-letter::before {height:125px;opacity:.75}
+.invitation-book .family-letter::after {height:80px}
+.invitation-book .family-letter h2 {font-size:clamp(22px,6.6cqw,30px);margin:12px 0 5px;line-height:1.2}
+.invitation-book .family-letter p {font-size:clamp(13px,3.6cqw,16px);line-height:1.5}
+.invitation-book .family-letter .family-eyebrow {font:9px/1.6 Arial,sans-serif;letter-spacing:.2em}
+.invitation-book .letter-families {grid-template-columns:1fr;gap:12px;margin:20px 0 16px}
+.invitation-book .letter-families h3 {font-size:clamp(26px,8cqw,36px);line-height:1.06}
+.invitation-book .letter-families h3 span {font-size:.66em;margin-top:4px}
+.invitation-book .letter-families .letter-relation {font-size:9px;margin:10px 0 3px;line-height:1.4}
+.invitation-book .letter-weds {font-size:19px;line-height:1.1}
+.invitation-book .letter-ornament {font-size:18px;margin:10px 0}
+.invitation-book .family-letter .letter-verse {font-size:clamp(13px,3.8cqw,17px);line-height:1.5;margin-bottom:6px}
+.invitation-book .letter-closing {font-style:italic;font-size:12px!important}
+@container(max-width:310px) {
+ .invitation-book .family-letter-content {padding:18px 14px}
+ .invitation-book .family-letter h2 {font-size:20px;margin-top:8px}
+ .invitation-book .family-letter p {font-size:12px;line-height:1.4}
+ .invitation-book .letter-families {gap:7px;margin:12px 0 8px}
+ .invitation-book .letter-families h3 {font-size:23px}
+ .invitation-book .letter-families .letter-relation {font-size:8px;margin-top:6px}
+ .invitation-book .letter-weds {font-size:16px}
+ .invitation-book .letter-ornament {margin:6px 0;font-size:16px}
+ .invitation-book .family-letter .letter-verse {font-size:12px}
+ .invitation-book .letter-closing {font-size:11px!important}
+ .invitation-book .scene-heading {margin-bottom:7px}
+ .invitation-book .scene-footer {padding-top:7px}
+ .invitation-book .scene-response {font-size:11px}
+}
+@media(max-width:600px) {
+ .invitation-book {--book-width:min(calc(100vw - 24px),calc((100svh - 112px) * .6));padding:14px 12px 10px}
+ .book-navigation {padding-top:15px}
+}
+@media(prefers-reduced-motion:reduce) {
+ .invitation-book,.book-page,.book-fold-shadow {animation:none!important;transition:none!important}
+}
