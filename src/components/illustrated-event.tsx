@@ -11,7 +11,7 @@ const details = {
 const schedule = {
  haldi: {date:'25 November 2026', time:'2:00 PM', dateTime:'2026-11-25T14:00:00', dressCode:'Shades of Sunshine', dressNote:''},
  sangeet: {date:'25 November 2026', time:'7:00 PM', dateTime:'2026-11-25T19:00:00', dressCode:'Shimmer & Shadows', dressNote:'Bring out the bling! Dress to dazzle in deep, dark shades and sparkly outfits.'},
- wedding: {date:'26 November 2026', time:'1:00 PM', dateTime:'2026-11-26T13:00:00', dressCode:'Pastel Perfection', dressNote:'For the barat & reception'},
+ wedding: {date:'26 November 2026', time:'1:00 PM', dateTime:'2026-11-26T13:00:00', dressCode:'Pastel Perfection', dressNote:'Soft pastels, festive Indian wear, and shoes made for dancing'},
 };
 export default function IllustratedEvent({theme,book=false}:{theme:keyof typeof details;book?:boolean}) {
  const root=useRef<HTMLElement>(null), burst=useRef<HTMLDivElement>(null),timer=useRef<ReturnType<typeof setTimeout> | null>(null);
