@@ -13,9 +13,9 @@ const familyInvitation = (
     <h2 id="family-invitation-title">We joyfully invite you</h2>
     <p className="letter-opening">to celebrate the wedding of</p>
     <div className="letter-families">
-     <div><h3>Akshita <span>Magotra</span></h3><p className="letter-relation">Daughter of</p><p>Sudesh Kumar Magotra<br/>& Renu Sharma</p></div>
+     <div><h3>Akshita <span>Magotra</span></h3><p className="letter-relation">Daughter of</p><p>Renu Sharma<br/>& Sudesh Kumar Magotra</p></div>
      <em className="letter-weds">weds</em>
-     <div><h3>Abhishek <span>Singh Saini</span></h3><p className="letter-relation">Son of</p><p>Kamal Singh Saini<br/>& Anita Saini</p></div>
+     <div><h3>Abhishek <span>Singh Saini</span></h3><p className="letter-relation">Son of</p><p>Anita Saini<br/>& Kamal Singh Saini</p></div>
     </div>
     <div className="letter-ornament" aria-hidden="true">— ✧ —</div>
     <p className="letter-verse" lang="hi">दो दिलों का मिलन, दो परिवारों का संगम।</p>
