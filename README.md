@@ -1,6 +1,6 @@
 # Akshita & Abhishek — Wedding Invitation
 
-An illustrated, interactive wedding invitation with a gold seal and five turning pages: welcome, family invitation, Haldi, Sangeet, and Baarat & Reception.
+An illustrated, interactive wedding invitation with a gold seal and six turning pages: welcome, family invitation, Haldi, Sangeet, Baarat & Reception, and a floral closing note from the families.
 
 **Website:** https://akshita-abhishek.github.io/wedding-invitation/
 
@@ -19,7 +19,7 @@ npm ci
 npm run dev
 ```
 
-Open the URL printed by Vite, including `/wedding-invitation/`.
+Open the URL printed by Vite, including `/wedding-invitation/`. Development mode stays silent for testing; production builds retain the invitation’s background music.
 
 ```sh
 npm run build
@@ -37,6 +37,7 @@ The repository path is configured in `vite.config.ts`. Update `base` if the repo
 ## Editing the invitation
 
 - Family names and page order: `src/App.tsx`
+- Closing message and floral styling: `src/components/closing-invitation.tsx` and its accompanying CSS
 - Event dates, times, and venue: `src/components/illustrated-event.tsx`
 - Page turning and swipe behavior: `src/components/invitation-book.tsx`
 - Styling: `src/app/`
@@ -46,4 +47,4 @@ The repository path is configured in `vite.config.ts`. Update `base` if the repo
 
 The background music uses the supplied “Ishq Hai” clip in `public/audio/ishqhai.m4a`, with its first three nearly silent seconds removed and the web copy optimized for streaming (about 87 seconds, 128 kbps AAC). Its URL in `src/lib/music-config.ts` includes `import.meta.env.BASE_URL` so it works on GitHub Pages; the version query refreshes previously cached audio. Audio preloads while the seal is displayed, starts on the seal tap, and loops across page turns. There are no guest music controls. If playback is blocked or interrupted, it retries on the next guest tap or keypress after opening the seal. Browsers may limit preloading, so an immediate tap on a slow connection can still need buffering. Set `backgroundMusicUrl` to `null` to disable music.
 
-Guests can swipe left or right, use the navigation buttons, or use the keyboard arrow keys. Links ending in `#haldi`, `#sangeet`, or `#wedding` open the corresponding page after the seal. Decorative animations automatically respect the device's reduced-motion preference.
+Guests can swipe left or right, use the navigation buttons, or use the keyboard arrow keys. Links ending in `#haldi`, `#sangeet`, `#wedding`, or `#closing` open the corresponding page after the seal. Navigation shows page numbers without repeated visible page titles. Decorative animations automatically respect the device's reduced-motion preference.
