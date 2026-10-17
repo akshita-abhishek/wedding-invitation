@@ -30,7 +30,7 @@ const pages = [
  {id:'invitation', title:'The invitation', content:familyInvitation},
  {id:'haldi', title:'Haldi', content:<Celebration theme="haldi" book/>},
  {id:'sangeet', title:'Sangeet', content:<Celebration theme="sangeet" book/>},
- {id:'wedding', title:'Baarat & Reception', content:<Celebration theme="wedding" book/>},
+ {id:'wedding', title:'Baraat & Reception', content:<Celebration theme="wedding" book/>},
  {id:'closing', title:'Warm regards', content:<ClosingInvitation/>},
 ];
 
