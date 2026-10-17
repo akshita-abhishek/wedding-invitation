@@ -1,6 +1,6 @@
 # Akshita & Abhishek — Wedding Invitation
 
-An illustrated, interactive wedding invitation with a gold seal and five turning pages: welcome, family invitation, Haldi, Sangeet, and Wedding.
+An illustrated, interactive wedding invitation with a gold seal and five turning pages: welcome, family invitation, Haldi, Sangeet, and Baarat & Reception.
 
 **Website:** https://akshita-abhishek.github.io/wedding-invitation/
 
@@ -8,7 +8,7 @@ An illustrated, interactive wedding invitation with a gold seal and five turning
 | --- | --- | --- | --- |
 | Haldi | 25 November 2026 | 2:00 PM | Hari Niwas Palace |
 | Sangeet | 25 November 2026 | 7:00 PM | Hari Niwas Palace |
-| Wedding | 26 November 2026 | 1:00 PM | Hari Niwas Palace |
+| Baarat & Reception | 26 November 2026 | 1:00 PM | Hari Niwas Palace |
 
 ## Run locally
 
