@@ -113,7 +113,7 @@ export default function InvitationBook({ pages, musicControl }: { pages: Page[];
     <Button variant="ghost" size="icon" className="page-arrow" type="button" disabled={current === 0 || !!turn}
      aria-label={current > 0 ? `Previous page: ${pages[current - 1].title}` : 'Previous page'} onClick={() => go(current - 1)}><ArrowLeft aria-hidden="true"/></Button>
     <div className="book-pagination" role="status" aria-live="polite" aria-atomic="true">
-     <span className="book-page-name">{pages[current].title}</span>
+     <span className="sr-only">{pages[current].title}. </span>
      <span className="book-page-number"><span className="sr-only">Page </span>{String(current + 1).padStart(2, '0')} <span aria-hidden="true">/</span><span className="sr-only"> of </span> {String(pages.length).padStart(2, '0')}</span>
     </div>
     <Button variant="ghost" size="icon" className="page-arrow" type="button" disabled={!!turn}
