@@ -46,7 +46,6 @@
 .book-navigation .page-arrow svg {width:19px;height:19px}
 .book-navigation .page-arrow:focus-visible {outline:2px solid #94703a;outline-offset:4px}
 .book-pagination {display:flex;flex-direction:column;align-items:center;gap:5px;text-align:center}
-.book-page-name {font:italic 18px/1.15 Georgia,serif}
 .book-page-number {font:10px/1.3 Arial,sans-serif;letter-spacing:.18em;color:#947a55}
 .book-footer {display:flex;align-items:center;justify-content:center;gap:12px;margin-top:3px;min-height:44px}
 .book-gesture-hint {text-align:center;font:italic 11px/1.5 Georgia,serif;color:#9b8463;margin:0}
