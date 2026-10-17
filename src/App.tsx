@@ -1,6 +1,7 @@
 import Celebration from '@/components/illustrated-event';
 import SealEntrance from '@/components/seal-entrance';
 import InvitationBook from '@/components/invitation-book';
+import ClosingInvitation from '@/components/closing-invitation';
 import { useWeddingMusic } from '@/components/wedding-music';
 import './app/seal-entrance.css';
 import './app/palace-opening.css';
@@ -30,9 +31,11 @@ const pages = [
  {id:'haldi', title:'Haldi', content:<Celebration theme="haldi" book/>},
  {id:'sangeet', title:'Sangeet', content:<Celebration theme="sangeet" book/>},
  {id:'wedding', title:'Baarat & Reception', content:<Celebration theme="wedding" book/>},
+ {id:'closing', title:'Warm regards', content:<ClosingInvitation/>},
 ];
 
 export default function Home(){
  const music = useWeddingMusic();
- return <>{music.audio}<SealEntrance paginated onOpen={music.start}><InvitationBook pages={pages} musicControl={music.control}/></SealEntrance></>;
+ // Local development stays silent while the published invitation keeps its music.
+ return <>{!import.meta.env.DEV && music.audio}<SealEntrance paginated onOpen={music.start}><InvitationBook pages={pages} musicControl={music.control}/></SealEntrance></>;
 }
