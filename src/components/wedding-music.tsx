@@ -1,34 +1,36 @@
-import { useRef, useState } from 'react';
-import { Volume2, VolumeX } from 'lucide-react';
+import { useCallback, useEffect, useRef } from 'react';
 import { backgroundMusicUrl } from '@/lib/music-config';
 
 export function useWeddingMusic() {
  const player = useRef<HTMLAudioElement>(null);
- const [playing, setPlaying] = useState(false);
- const [unavailable, setUnavailable] = useState(false);
+ const requested = useRef(false);
+
+ const play = useCallback(() => {
+  const audio = player.current;
+  if (!audio || !audio.paused) return;
+  if (audio.error) audio.load();
+  // Keep playback inside a user gesture; a blocked attempt retries on the next tap.
+  void audio.play().catch(() => {});
+ }, []);
 
  function start() {
-  const audio = player.current;
-  if (!audio) return;
-  setUnavailable(false);
-  if (audio.error) audio.load();
-  // This call stays inside the seal/button gesture so mobile browsers allow it.
-  void audio.play().catch(error => {
-   setPlaying(false);
-   if (error.name !== 'NotAllowedError' && error.name !== 'AbortError') setUnavailable(true);
-  });
+  requested.current = true;
+  play();
  }
+
+ useEffect(() => {
+  const resume = () => { if (requested.current) play(); };
+  document.addEventListener('pointerdown', resume, { passive: true });
+  document.addEventListener('keydown', resume);
+  return () => {
+   document.removeEventListener('pointerdown', resume);
+   document.removeEventListener('keydown', resume);
+  };
+ }, [play]);
 
  return {
   start,
-  audio: backgroundMusicUrl ? <audio ref={player} src={backgroundMusicUrl} preload="none" loop
-   onPlaying={() => setPlaying(true)} onPause={() => setPlaying(false)}
-   onError={() => { setPlaying(false); setUnavailable(true); }} /> : null,
-  control: backgroundMusicUrl ? <button className="music-toggle" type="button" aria-label={playing?'Mute background music':'Play background music'}
-   aria-pressed={playing} title={unavailable?'Music could not load. Tap to retry.':playing?'Mute background music':'Play background music'}
-   onClick={() => { if (playing) player.current?.pause(); else start(); }}>
-   {playing?<Volume2 aria-hidden="true"/>:<VolumeX aria-hidden="true"/>}
-   <span>{unavailable?'Retry music':playing?'Music on':'Music off'}</span>
-  </button> : null,
+  audio: backgroundMusicUrl ? <audio ref={player} src={backgroundMusicUrl} preload="auto" loop /> : null,
+  control: null,
  };
 }
