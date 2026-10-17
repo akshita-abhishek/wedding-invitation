@@ -6,10 +6,10 @@ const details = {
  welcome: {title:'Welcome', heading:'Together, with our families', verse:'आपका स्वागत है।'},
  haldi: {title:'Haldi', heading:'A little sunshine, a lot of love', verse:'प्यार का रंग, हल्दी के संग।'},
  sangeet: {title:'Sangeet', heading:'An evening of music & togetherness', verse:'थोड़ी मस्ती, ढेर सारी यादें।'},
- wedding: {title:'Wedding', heading:'Together, with your blessings', verse:'सात फेरे, सात वचन, एक जीवन।'},
+ wedding: {title:'Baarat & Reception', heading:'Together, with your blessings', verse:'सात फेरे, सात वचन, एक जीवन।'},
 };
 const schedule = {
- haldi: {date:'25 November 2026', time:'2:00 PM', dateTime:'2026-11-25T14:00:00', dressCode:'Shades of Sunshine', dressNote:''},
+ haldi: {date:'25 November 2026', time:'2:00 PM', dateTime:'2026-11-25T14:00:00', dressCode:'Shades of Sunshine', dressNote:'Sunny hues, floral accents, and breezy Indian wear.'},
  sangeet: {date:'25 November 2026', time:'7:00 PM', dateTime:'2026-11-25T19:00:00', dressCode:'Shimmer & Shadows', dressNote:'Bring out the bling! Dress to dazzle in deep, dark shades and sparkly outfits.'},
  wedding: {date:'26 November 2026', time:'1:00 PM', dateTime:'2026-11-26T13:00:00', dressCode:'Pastel Perfection', dressNote:'Soft pastels, festive Indian wear, and shoes made for dancing'},
 };
