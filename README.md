@@ -8,7 +8,7 @@ An illustrated, interactive wedding invitation with a gold seal and six turning 
 | --- | --- | --- | --- |
 | Haldi | 25 November 2026 | 2:00 PM | Hari Niwas Palace |
 | Sangeet | 25 November 2026 | 7:00 PM | Hari Niwas Palace |
-| Baraat & Reception | 26 November 2026 | 1:00 PM | Hari Niwas Palace |
+| Baraat & Reception | 26 November 2026 | 1:30 PM | Hari Niwas Palace |
 
 ## Run locally
 
